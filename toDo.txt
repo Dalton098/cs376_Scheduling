@@ -1,0 +1,7 @@
+PCB		done
+Driver		done?
+Scheduler 	Done?
+PCB		Done
+PE_SJF		Not Started
+FCFS		Not Started
+RR		Not Started

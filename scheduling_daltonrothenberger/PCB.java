@@ -7,7 +7,7 @@ package scheduling_daltonrothenberger;
  */
 public class PCB {
 
-    private int _pid = -1;
+    private int _pid = 0;
     private int _arrivalTime = 0;
     private int _burstTime = 0;
     private int _burstDurationLeft = 0;
@@ -105,6 +105,10 @@ public class PCB {
      */
     public void setTurnAroundTime(int endTime) {
         _turnAroundTime = endTime - _arrivalTime;
+    }
+
+    public String toString() {
+        return Integer.toString(_pid);
     }
 
 }

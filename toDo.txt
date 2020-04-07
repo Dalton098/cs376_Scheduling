@@ -2,6 +2,12 @@ PCB		done
 Driver		done?
 Scheduler 	Done?
 PCB		Done
-PE_SJF		Not Started
-FCFS		Not Started
-RR		Not Started
+FCFS		Done	
+PE_SJF		Not Started		NEED TO SET TURNAROUND TIME ONCE A PCB IS COMPLETED
+RR		Not Started		
+
+For RR and PE_SJF use 3 array list. toSchedule, scheduling, completed
+
+scheduling contains any process that has arrived
+	RR just does its thing for any in there until this duration left is 0
+	PE_SJF sorts scheduling by burstDurationLeft and just picks the first one everytime

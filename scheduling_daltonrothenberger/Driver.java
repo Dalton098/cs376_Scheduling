@@ -1,14 +1,20 @@
 package scheduling_daltonrothenberger;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.io.*;
+
+//  Sorting via using a method reference as the variable to sort on
+// Found at: https://stackoverflow.com/questions/2784514/sort-arraylist-of-custom-objects-by-property
+// import static java.util.Comparator.comparing;
+// Collections.sort(temp, comparing(PCB::getArrivalTime));
 
 public class Driver {
 
     /**
-     * Comes in the form input_file [FCFS|RR|SJF] [time_quantum] Where input_file is
-     * the file with the data for the PCBs FCFS|RR|SJF is the scheduling algorithm
-     * selected time_quantum is only used when RR is selected which will be the time
+     * Comes in the form: input_file [FCFS|RR|SJF] [time_quantum] 
+     * Where input_file is the file with the data for the PCBs 
+     * FCFS|RR|SJF is the scheduling algorithm selected 
+     * time_quantum is only used when RR is selected which will be the time
      * quantum used for RR
      * 
      * @param args Command line arguments
@@ -18,7 +24,10 @@ public class Driver {
         // The minimum/maximum expected arguments to be taked in
         final int MIN_ARGUMENTS = 2;
         final int MAX_ARGUMENTS = 3;
-        boolean isInputValid = true;
+
+        // YES I AM EXITING EARLY BUT IT IS A MUCH EASIER TO FOLLOW SOLUTION THAN HAVING
+        // OVERARCHING IF STATEMENTS SO THAT IF ANY OF THESE FAILS THEN EXIT
+
 
         // Checking minimum agruments
         if (args.length < MIN_ARGUMENTS) {
@@ -74,6 +83,7 @@ public class Driver {
                     break;
                 case "FCFS":
                     scheme = new FCFS(toSchedule);
+                    break;
                 case "RR":
                     scheme = new RR(toSchedule, quantum);
                     break;
@@ -84,7 +94,7 @@ public class Driver {
             scheduler.runScheme();
 
         } catch (Exception e) {
-            System.out.println("Error: Unable to parse input file");
+            System.out.println("Error: A problem occurred with the scheduling algorithm or parsing the input file");
             System.out.println("Expected form of input file: pid arrivalTime burstTime");
         }
 

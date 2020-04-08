@@ -7,6 +7,10 @@ Instructions:
 	-time_quantum is only used when RR is selected which will be the time
 	quantum used for RR
 
+Input Files:
+	- input1.txt: The example provided in the instructions
+	- input2.txt: A simple example to demonstrate CPU usage is properly tracking
+
 
 Driver
 Takes in command line argument of the form:java Driver input_file [FCFS|RR|SJF] [time_quantum] 

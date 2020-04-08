@@ -1,9 +1,14 @@
-package scheduling_daltonrothenberger;
-
 /**
- * Class that holds relevant information for the processes that will be executed
- * in the scheduling algorithms. Acts as a container of data and performs some
- * calcuations regarding the information inside the class such as wait time.
+ * PCB 
+ * Class that holds relevant information for the processes that will be
+ * executed in the scheduling algorithms. Acts as a container of data and
+ * performs some calcuations regarding the information inside the class such as
+ * wait time.
+ * 
+ * CS 376 
+ * 4/7/2020
+ * @author Dalton Rothenberger
+ *
  */
 public class PCB {
 
@@ -22,7 +27,7 @@ public class PCB {
      * 
      * @param pid         The process id
      * @param arrivalTime The arrival time of the process
-     * @param burstTime    The total ticks the process will take to run
+     * @param burstTime   The total ticks the process will take to run
      */
     public PCB(int pid, int arrivalTime, int burstTime) {
         _pid = pid;

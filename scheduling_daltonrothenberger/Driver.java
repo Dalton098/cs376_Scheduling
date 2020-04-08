@@ -1,13 +1,21 @@
-package scheduling_daltonrothenberger;
-
 import java.util.*;
 import java.io.*;
 
-//  Sorting via using a method reference as the variable to sort on
-// Found at: https://stackoverflow.com/questions/2784514/sort-arraylist-of-custom-objects-by-property
-// import static java.util.Comparator.comparing;
-// Collections.sort(temp, comparing(PCB::getArrivalTime));
-
+/**
+ * Driver
+ * Takes in command line argument of the form:java Driver input_file [FCFS|RR|SJF] [time_quantum] 
+ * Controls input towards the scheduling schemes and creating the scheduler object
+ * 
+ * Instructions:
+ * -   To compile the files run javac *.java 
+ *     from a terminal while in the directory containing the files
+ * -   Then to run do: java Driver input_file [FCFS|RR|SJF] [time_quantum] 
+ *     Input explanation is below at the top of the main
+ * 
+ * CS 376
+ * 4/7/2020
+ * @author Dalton Rothenberger
+ */
 public class Driver {
 
     /**
@@ -25,9 +33,8 @@ public class Driver {
         final int MIN_ARGUMENTS = 2;
         final int MAX_ARGUMENTS = 3;
 
-        // YES I AM EXITING EARLY BUT IT IS A MUCH EASIER TO FOLLOW SOLUTION THAN HAVING
-        // OVERARCHING IF STATEMENTS SO THAT IF ANY OF THESE FAILS THEN EXIT
-
+        // YES I AM EXITING EARLY BUT IT IS A BETTER SOLUTION THAN HAVING
+        // OVERARCHING IF STATEMENTS SO IF ANY OF THESE ARE TRUE EXIT BECAUSE INPUT IS INVALID
 
         // Checking minimum agruments
         if (args.length < MIN_ARGUMENTS) {

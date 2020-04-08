@@ -1,7 +1,16 @@
-package scheduling_daltonrothenberger;
-
 import java.util.ArrayList;
 
+/**
+ * Scheduling Scheme
+ * Abstract Class that outlines some of the necessary member data and functions
+ * for the scheduling algorithms to have. Also, comes with generalized functions
+ * for calculating average wait time and average turnaround time
+ * 
+ * CS 376 
+ * 4/7/2020
+ * @author Dalton Rothenberger
+ *
+ */
 public abstract class SchedulingScheme {
 
     // Name of the Scheduling Algorithm
